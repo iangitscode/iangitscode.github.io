@@ -1,0 +1,16 @@
+html{
+	overflow:hidden;
+}
+
+body{ 
+	background-size: 100%,100%;
+	user-select: none;
+	}
+	
+#ball{
+	height: 200px;
+	width: 200px;
+	left:0px;
+	top:0px;
+	position:absolute;
+	}

@@ -18,20 +18,26 @@ function init(){
 function tick(){
 	document.getElementById("ball").style.top=yPos+"px";
 	document.getElementById("ball").style.left=xPos+"px";
+
 	if(!started) return;
 
+	//angle stuff
 	angle+=rotatespeed;
 	document.getElementById("ball").style.transform="rotate("+angle+"deg)";
 
-
+	//bouncing off walls, need to flip xVel and rotatespeed
 	if(xPos+200>window.innerWidth || xPos<0){
 		vX*=-1;
 		rotatespeed*=-1;
 	}
+
+	//calculate new position
 	yPos+=vY;
 	xPos-=vX;
 	vY+=aY;
-	if(yPos>window.innerHeight+200){ //reset
+
+	//reset if lose
+	if(yPos>window.innerHeight+200){
 		rotatespeed=0;
 		yPos=window.innerHeight-200;
 		xPos=window.innerWidth/2-100;
@@ -44,6 +50,7 @@ function tick(){
 
 function drawScore(){
 	document.getElementById("score").innerHTML=score;
+	document.getElementById("highscore").innerHTML=highscore;
 }
 
 function clicked(event){
@@ -54,7 +61,6 @@ function clicked(event){
 	score++;
 	if(score>highscore){
 		highscore=score;
-		document.getElementById("highscore").innerHTML=highscore;
 	}
 	drawScore();
 	vY=-30;

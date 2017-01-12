@@ -37,7 +37,6 @@ function tick(){
 		xPos=window.innerWidth/2-100;
 		vX=0;
 		vY=0;
-		score=0;
 		drawScore();
 		started=false;
 	}
@@ -48,7 +47,10 @@ function drawScore(){
 }
 
 function clicked(event){
+	if(!started){
+	score=0;
 	started=true;
+	}	
 	score++;
 	if(score>highscore){
 		highscore=score;

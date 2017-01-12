@@ -3,9 +3,15 @@ html{
 }
 
 body{ 
-	background-size: 100%,100%;
 	user-select: none;
 	}
+
+.text{
+	text-align: center;
+	opacity:0.3;
+	font-size:300%;
+	font-family:"Courier New";
+}
 	
 #ball{
 	height: 200px;
@@ -13,4 +19,6 @@ body{
 	left:0px;
 	top:0px;
 	position:absolute;
+	-webkit-transform:rotate(0deg);
+	transform(0deg);
 	}

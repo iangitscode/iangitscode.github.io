@@ -4,18 +4,22 @@ var vX=0;
 var vY=0;
 var angle=0;
 var rotatespeed=0;
-var yPos=window.innerHeight-200;
-var xPos=window.innerWidth/2-100;
+var size=window.innerHeight/4;
+var yPos=window.innerHeight-size;
+var xPos=(window.innerWidth-size)/2;
 var timer;
 var score=0;
 var highscore=0;
 var started=false;
 
 function init(){
+	document.getElementById("ball").style.height=size+"px";
+	document.getElementById("ball").style.width=size+"px";
 	timer = setInterval(function(){tick()}, 10);
 }
 
 function tick(){
+	
 	document.getElementById("ball").style.top=yPos+"px";
 	document.getElementById("ball").style.left=xPos+"px";
 
@@ -26,7 +30,7 @@ function tick(){
 	document.getElementById("ball").style.transform="rotate("+angle+"deg)";
 
 	//bouncing off walls, need to flip xVel and rotatespeed
-	if(xPos+200>window.innerWidth || xPos<0){
+	if(xPos+size>window.innerWidth || xPos<0){
 		vX*=-1;
 		rotatespeed*=-1;
 	}
@@ -37,10 +41,10 @@ function tick(){
 	vY+=aY;
 
 	//reset if lose
-	if(yPos>window.innerHeight+200){
+	if(yPos>window.innerHeight+size){
 		rotatespeed=0;
-		yPos=window.innerHeight-200;
-		xPos=window.innerWidth/2-100;
+		yPos=window.innerHeight-size;
+		xPos=(window.innerWidth-size)/2;
 		vX=0;
 		vY=0;
 		drawScore();
@@ -65,8 +69,8 @@ function clicked(event){
 	drawScore();
 	vY=-30;
 	mouseX=event.clientX;
-	if(mouseX>=xPos && mouseX<=xPos+200){
-		vX=(mouseX-xPos-100)/5;
+	if(mouseX>=xPos && mouseX<=xPos+size){
+		vX=(mouseX-xPos-size/2)/5;
 		rotatespeed=-vX/2;
 	}
 }

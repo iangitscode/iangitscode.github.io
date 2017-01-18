@@ -11,16 +11,26 @@ body{
             user-select: none;
 	}
 
+@keyframes disappear {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+
 .text{
-	text-align: center;
-	opacity:0.3;
-	font-size:400%;
+	font-size:75px;
 	font-family:"Courier New";
+	opacity:0.3;
+	text-align: center;
+}
+
+
+.buffer{
+	margin-top: 15%;
 }
 	
 #ball{
-	height: 200px;
-	width: 200px;
+	height: 0px;
+	width: 0px;
 	left:0px;
 	top:0px;
 	position:absolute;

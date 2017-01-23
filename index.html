@@ -4,12 +4,14 @@
 <script src="ballcode.js"></script>
 </head>
 <body onload="init()">
-	<div class="buffer text" >
+	<div id="button" onclick="instructions()"> How-To </div>
+	<div class="text">
 		High Score:
 		<div id="highscore">0</div>
 		<br>
 		Current Score:
 		<div id="score">0</div>
 	</div>
+	<img id="ball" src="ball.png" onclick="clicked(event)" draggable="false">
 </body>
 </html>

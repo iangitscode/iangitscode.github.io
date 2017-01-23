@@ -9,31 +9,51 @@ body{
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-	}
-
-@keyframes disappear {
-    from {opacity:1;}
-    to {opacity:0;}
 }
 
 .text{
-	font-size:75px;
+	font-size:300%;
 	font-family:"Courier New";
 	opacity:0.3;
-	text-align: center;
+	text-align:center;
+	padding-top:10%;
 }
 
+.over{
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	animation-name:appear;
+	animation-duration:1.3s;
+	background-color:#000000;
+	opacity:0.95;
+	color:white;
+}
 
-.buffer{
-	margin-top: 15%;
+#button{
+	font-size:65px;
+	font-family:"Alfa Slab One";
+	border-color:#95b0db;
+	border-style:solid;
+	display:inline-block;
+	color:#95b0db;
+	padding-left:15px;
+	padding-right:15px;
 }
 	
 #ball{
-	height: 0px;
-	width: 0px;
+	height:0px;
+	width:0px;
 	left:0px;
 	top:0px;
 	position:absolute;
 	-webkit-transform:rotate(0deg);
 	transform(0deg);
-	}
+}
+
+@keyframes appear{
+	from {opacity:0;}
+	to {opacity:0.95;}
+}

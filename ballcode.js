@@ -13,63 +13,18 @@ var highscore=0;
 var started=false;
 
 function init(){
-	var info = document.createElement("div");
-	var infoSize=window.innerWidth*0.4;
-	info.style.borderRadius="20%";
-	info.style.height=infoSize;
-	info.style.width=infoSize;
-	info.style.position="absolute";
-	info.style.left="30%";
-	info.style.top="5%";
-	info.style.backgroundColor="#90b5e5";
-
-	
-	var text = document.createElement("div");
-	text.innerHTML="Click the ball!";
-	text.style.marginTop="30%";
-	text.setAttribute("class","text");
-	info.appendChild(text);
-
-	var button = document.createElement("div");
-	button.setAttribute("class","text");
-	button.style.opacity="0.9";
-	button.innerHTML="GOT IT";
-	button.style.height="13%";
-	button.style.borderStyle="solid";
-	button.style.borderWidth="medium";
-	button.style.borderColor="red";
-	button.style.width="46%";
-	button.style.position="absolute";
-	button.style.left="27%"
-	button.style.borderRadius="30%";
-	button.style.backgroundColor="#2c1d54";
-	button.style.color="white";
-	button.setAttribute("onclick","slowDelete(this.parentNode)");
-
-	//<img id='ball' src='ball.png' onclick='clicked(event)'draggable='false'>
-	info.appendChild(button);
-	
-	document.body.appendChild(info);
-}
-
-function slowDelete(x){
-	x.style.animationName="disappear";
-	x.style.animationDuration="1s";
-	setTimeout(function(){document.body.removeChild(x);}, 1000);
-	createBall();
-
-}
-
-function createBall(){
-	var ball = document.createElement('img');
-	ball.setAttribute('id','ball');
-	ball.setAttribute('src','ball.png');
-	ball.setAttribute('onclick','clicked(event)');
-	ball.setAttribute('draggable','false');
-	ball.style.height=size+'px';
-	ball.style.width=size+'px';
 	timer = setInterval(function(){tick()}, 10);
-	document.body.appendChild(ball);
+	document.getElementById("ball").style.height=size+'px';
+	document.getElementById("ball").style.width=size+'px';
+	createBall();
+}
+
+function instructions(){
+	var over = document.createElement('div');
+	over.innerHTML="Click the ball to kick it! Juggle as long as you can~ <br> (Click anywhere to return)";
+	over.setAttribute('class','over text');
+	over.setAttribute('onclick','this.parentNode.removeChild(this)');
+	document.body.appendChild(over);
 }
 
 function tick(){

@@ -5,13 +5,22 @@
 </head>
 <body onload="init()">
 	<div id="button" onclick="instructions()"> How-To </div>
-	<div class="text">
-		High Score:
-		<div id="highscore">0</div>
-		<br>
-		Current Score:
-		<div id="score">0</div>
+
+	<div id="descBox">
+		<span style="position:absolute;width:100%;text-align:left;">SPEED UP</span>
+		<span style="position:absolute;width:100%;text-align:right;">SLOW DOWN</span>
 	</div>
+
+	<!--Values represent 10 milliseconds-->
+	<input id="slider" type="range" min="100" max="500" value="200"/>
+
+		<div class="text">
+			High Score:
+			<div id="highscore">0</div>
+			<br>
+			Current Score:
+			<div id="score">0</div>
+		</div>
 	<img id="ball" src="ball.png" onclick="clicked(event)" draggable="false">
 </body>
 </html>

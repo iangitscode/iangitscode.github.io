@@ -5,10 +5,11 @@ html{
 body{ 
 	-webkit-touch-callout: none;
     -webkit-user-select: none;
-     -khtml-user-select: none; 
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	background-color:#f7f5ef;    
 }
 
 .text{
@@ -30,6 +31,7 @@ body{
 	background-color:#000000;
 	opacity:0.95;
 	color:white;
+	z-index:0;
 }
 
 #button{
@@ -51,6 +53,47 @@ body{
 	position:absolute;
 	-webkit-transform:rotate(0deg);
 	transform(0deg);
+}
+
+#descBox{
+	z-index:3;
+	margin-top:27%;
+	margin-left:15%;
+	position:absolute;
+	width:70%;
+	color:white;
+	display:none;
+	font-family:"Courier New";
+	font-size:30px;
+}
+
+#slider[type=range]{
+	-webkit-appearance:none;
+	width:70%;
+	height:30px;
+	border-radius:10px;
+	z-index:2;
+	display:none;
+	margin-top:30%;
+	margin-left:15%;
+	position:absolute;
+}
+
+#slider[type=range]::-webkit-slider-runnable-track { 
+	background:#e1e6ef;
+	border:none;
+	border-radius:10px;
+}
+
+#slider[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	box-shadow: 1px 1px 1px #000000;
+	border:none;
+	height:80px;
+	width:40px;
+	background:#6d9ce8;
+	border-radius:5px;
+	margin-top:-15px;
 }
 
 @keyframes appear{

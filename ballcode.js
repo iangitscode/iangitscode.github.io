@@ -3,13 +3,14 @@ var score=0;
 var highscore=0;
 var started=false;
 var tickCounter=0;
-var gameSpeed=20;
+var gameSpeed;
 
 function init(){
-	timer = setInterval(function(){tick()}, gameSpeed);
+	gameSpeed=document.getElementById("slider").value;
+	timer = setInterval(function(){tick()}, 20);
 	var ball=document.getElementById("ball");
-	ball.aX=1;
-	ball.aY=1;
+	ball.aX=0
+	ball.aY=parseInt(gameSpeed);
 	ball.vX=0;
 	ball.vY=0;
 	ball.angle=0;
@@ -17,9 +18,9 @@ function init(){
 	ball.size=window.innerHeight/4;
 	ball.yPos=window.innerHeight-ball.size;
 	ball.xPos=(window.innerWidth-ball.size)/2;
-	document.getElementById("ball").style.height=ball.size+'px';
-	document.getElementById("ball").style.width=ball.size+'px';
-	gameSpeed=document.getElementById("slider").value;
+	ball.style.height=ball.size+'px';
+	ball.style.width=ball.size+'px';
+	
 }
 
 function instructions(){
@@ -35,9 +36,8 @@ function instructions(){
 
 function uninstructions(obj){
 	obj.parentNode.removeChild(obj);
-	gameSpeed=slider.value/10;
-	clearInterval(timer);
-	timer = setInterval(function(){tick()}, gameSpeed);
+	gameSpeed=slider.value;
+	document.getElementById("ball").aY=parseInt(gameSpeed);
 	descBox.style.display="none";
 	slider.style.display="none";
 }
@@ -99,8 +99,8 @@ function clicked(event){
 	drawScore();
 
 	//set the ball's y velocity
-	ball.vY=-30;
-
+	ball.vY=-(gameSpeed*7+20);
+	
 	//set the ball's x velocity and rotation based on mouse position
 	mouseX=event.clientX;
 	if(mouseX>=ball.xPos && mouseX<=ball.xPos+ball.size){

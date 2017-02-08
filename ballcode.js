@@ -8,7 +8,7 @@ function init(){
 	var timer = setInterval(function(){tick()}, 20);
 	var ball=document.getElementById("ball");
 	ball.aX=0
-	ball.aY=parseInt(gameSpeed);
+	ball.aY=Math.pow(parseInt(gameSpeed)/3,2);
 	ball.vX=0;
 	ball.vY=0;
 	ball.angle=0;
@@ -34,7 +34,7 @@ function instructions(){
 function uninstructions(obj){
 	obj.parentNode.removeChild(obj);
 	gameSpeed=slider.value;
-	document.getElementById("ball").aY=parseInt(gameSpeed);
+	document.getElementById("ball").aY=Math.pow(parseInt(gameSpeed)/3,2);
 	descBox.style.display="none";
 	slider.style.display="none";
 }
@@ -96,8 +96,8 @@ function clicked(event){
 	drawScore();
 
 	//set the ball's y velocity --arbitrary numbers that seem to work--
-	ball.vY=-(gameSpeed*7+20);
-	
+	//ball.vY=-(gameSpeed*7+20);
+	ball.vY=-gameSpeed*9;
 	//set the ball's x velocity and rotation based on mouse position
 	mouseX=event.clientX;
 	if(mouseX>=ball.xPos && mouseX<=ball.xPos+ball.size){

@@ -1,13 +1,11 @@
-var timer;
 var score=0;
 var highscore=0;
 var started=false;
-var tickCounter=0;
 var gameSpeed;
 
 function init(){
 	gameSpeed=document.getElementById("slider").value;
-	timer = setInterval(function(){tick()}, 20);
+	var timer = setInterval(function(){tick()}, 20);
 	var ball=document.getElementById("ball");
 	ball.aX=0
 	ball.aY=parseInt(gameSpeed);
@@ -19,8 +17,7 @@ function init(){
 	ball.yPos=window.innerHeight-ball.size;
 	ball.xPos=(window.innerWidth-ball.size)/2;
 	ball.style.height=ball.size+'px';
-	ball.style.width=ball.size+'px';
-	
+	ball.style.width=ball.size+'px';	
 }
 
 function instructions(){
@@ -98,7 +95,7 @@ function clicked(event){
 	//draw the score and highscore
 	drawScore();
 
-	//set the ball's y velocity
+	//set the ball's y velocity --arbitrary numbers that seem to work--
 	ball.vY=-(gameSpeed*7+20);
 	
 	//set the ball's x velocity and rotation based on mouse position

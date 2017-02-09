@@ -96,12 +96,12 @@ function clicked(event){
 	drawScore();
 
 	//set the ball's y velocity --arbitrary numbers that seem to work--
-	//ball.vY=-(gameSpeed*7+20);
 	ball.vY=-gameSpeed*9;
+	
 	//set the ball's x velocity and rotation based on mouse position
 	mouseX=event.clientX;
 	if(mouseX>=ball.xPos && mouseX<=ball.xPos+ball.size){
-		ball.vX=(mouseX-ball.xPos-ball.size/2)/5;
+		ball.vX=(mouseX-ball.xPos-ball.size/2)*gameSpeed/25;
 		ball.rotatespeed=-ball.vX/2;
 	}
 }

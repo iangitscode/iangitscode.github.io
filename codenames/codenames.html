@@ -1,0 +1,20 @@
+<html>
+	<head>
+	    <script src="main.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body onload="init()">
+		<button onclick="startGame()">Start Game!</button>
+		<button id="myToggle" onclick="change()">Show agents</button>
+		<input type="file" id="input">
+		<button onclick="window.open('https://en.wikipedia.org/wiki/Codenames_(board_game)')">Rules</button>
+		<div id="whoStarts"></div>
+		<table cellspacing="10" id="myCounter">
+		<tr>
+		<td id="redLeft">Red Agents: ?</td><td id="blueLeft">Blue Agents: ?</td>
+		</tr>
+		</table>
+		<table border="1" cellspacing="0" id="myTable"></table>
+	</body>
+</html>
+	

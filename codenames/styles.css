@@ -5,3 +5,11 @@
 	font-family:impact;
 	font-size:30pt;
 }
+.red{
+	background-color:red;
+}
+.viewport{
+	position:absolute;
+	height:100%;
+	width:100%;
+}

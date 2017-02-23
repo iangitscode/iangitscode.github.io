@@ -1,42 +1,40 @@
 var words=[];
 //create the array of words
-var size;
-var maxBoxes;
 var redCards;
 var blueCards;
 var counter;
 var assCount;
 var hidden=true;
-	function init(){
-		document.getElementById("input").onchange = update;
-	}
+
+$(function(){	
+document.getElementById("input").onchange = update;
+});
 
 function startGame(){
 	//shuffles the words
 	shuffle(words);
 	//creates the counter
 	counter=0;
-	//asks for a size, number of cards to guess, and a number of assassins
-	do{
-		size=prompt("Enter the size of the grid","5");				
-		if(size<3){
-			alert("Error: Not big enough")
-		}
-	}while(size<3);
-	maxBoxes=Math.pow(size,2);
-	do{
-		redCards = prompt("How many agents per side?","7");
-		assCount = prompt("How many assassins would you like?","1");
-		blueCards=redCards;
-		if(parseInt(redCards)*2+parseInt(assCount)>=maxBoxes){
-			alert("Error: Not enough space on the board");
-		}
-		if(redCards==0){
-			alert("Error: Can't have 0 cards to guess")
-		}
-	}while(parseInt(redCards)*2+parseInt(assCount)>=maxBoxes || redCards==0);
+
+	/* Input Requirements:
+		size>2
+		agents!=0
+		assassins+(2*agents) < size^2
+	*/
+	assCount=$("#assassins").val();
+	var size=$("#gridSize").val();
+	var agents=$("#agents").val();
+	redCards=agents;
+	blueCards=agents;
 	
-//clears and resizes table			
+	var maxBoxes=Math.pow(size,2);
+	
+	if(!(size>2 && agents!=0 && (assCount+agents <= maxBoxes))){
+		console.log("fail");
+		return;
+	}
+	
+	//clears and resizes table			
     document.getElementById("myTable").innerHTML="";
 	document.getElementById("myTable").style.width=300*size+"px";
 	document.getElementById("myTable").style.height=200*size+"px";
@@ -143,7 +141,7 @@ function updateCounter(){
 //(very lazily) shuffles an array
 function shuffle(words){
 	var len=words.length;
-	for(x=0;x<5*len;x++){
+	for(x=0;x<len;x++){
 		var one=Math.floor(Math.random()*len);
 		var two=Math.floor(Math.random()*len);
 		var placeholder=words[one];

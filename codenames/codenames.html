@@ -1,20 +1,57 @@
+<!DOCTYPE html>
 <html>
 	<head>
-	    <script src="main.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="main.js"></script>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
-	<body onload="init()">
-		<button onclick="startGame()">Start Game!</button>
-		<button id="myToggle" onclick="change()">Show agents</button>
-		<input type="file" id="input">
-		<button onclick="window.open('https://en.wikipedia.org/wiki/Codenames_(board_game)')">Rules</button>
-		<div id="whoStarts"></div>
-		<table cellspacing="10" id="myCounter">
-		<tr>
-		<td id="redLeft">Red Agents: ?</td><td id="blueLeft">Blue Agents: ?</td>
-		</tr>
-		</table>
-		<table border="1" cellspacing="0" id="myTable"></table>
+	<body>
+		<div class="viewport">
+			<div class="container-fluid">
+				<div class="row viewport">
+
+					<!--Game Container-->
+	 				<div class="col-lg-10">
+						<table border="1" cellspacing="0" id="myTable"></table>
+					</div>
+
+					<!--Buttons Container-->
+					<div class="col-lg-2">
+					<form class="form-horizontal">
+ 							<div class="form-group">
+								<label for="gridSize" class="col-sm-4 control-label">Grid Size</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="gridSize" placeholder="Ex: 5">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="agents" class="col-sm-4 control-label">Agents</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="agents" placeholder="Ex: 7">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="assassins" class="col-sm-4 control-label">Assassins</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="assassins" placeholder="Ex: 1">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="input" class="col-sm-4">File Input</label>
+								<input type="file" id="input">
+							</div>
+						</form>
+						<button type="button" onclick="startGame()" class="btn btn-lg btn-primary">Start Game!</button>
+						<button id="myToggle" onclick="change()">Show agents</button>
+						<button onclick="window.open('https://en.wikipedia.org/wiki/Codenames_(board_game)')">Rules</button>
+						<div id="whoStarts"></div>
+						
+						<span id="redLeft">Red Agents: ?</span>
+						<span id="blueLeft">Blue Agents: ?</span>
+					</div> 
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
-	

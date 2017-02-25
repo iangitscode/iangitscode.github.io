@@ -3,12 +3,6 @@ body{
 	overflow-x: hidden;
 }
 
-#name{
-	font-family:Merriweather;
-	color:white;
-	font-size:700%;
-}
-
 .landing{
 	height:100vh;
 	width:100vw;
@@ -21,7 +15,7 @@ body{
 
 .title{
 	position:absolute;
-	top:3em;
+	top:25%;
 	width:100%;
 	font-family:Merriweather;
 	color:white;
@@ -33,6 +27,11 @@ body{
 .subtitle{
 	font-size:50%;
 	font-weight:lighter;
+}
+
+.text{
+	font-size:300%;
+	font-family:Amiko;
 }
 
 .darkback{

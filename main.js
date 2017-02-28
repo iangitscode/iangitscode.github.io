@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	fillStars();
+	$("#image").height($("#aboutme").height());
 });
 
 //Function to insert stars into elements with class 'star'

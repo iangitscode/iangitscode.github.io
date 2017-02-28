@@ -1,6 +1,12 @@
 body{
 	max-width: 100%;
 	overflow-x: hidden;
+	font-family:Amiko;
+}
+
+td{
+	width:200px;
+	font-size:175%;
 }
 
 .landing{
@@ -13,15 +19,25 @@ body{
 	margin-bottom:4em;
 }
 
-.title{
+#aboutme{
+	background-color:#434549;
+	font-size:350%;
+	color:#fffaf7;
+	font-weight:bold;
+}
+
+.header{
 	position:absolute;
 	top:25%;
 	width:100%;
 	font-family:Merriweather;
 	color:white;
 	font-size:900%;
-	text-align:center;
 	font-weight:bolder;
+}
+
+.leftpad{
+	padding-left:30px;
 }
 
 .subtitle{
@@ -30,14 +46,53 @@ body{
 }
 
 .text{
-	font-size:300%;
-	font-family:Amiko;
+	font-size:350%;
+	color:#fffaf7;
+	font-weight:bold;
 }
 
 .darkback{
 	background-color:black;
 }
 
-.blueback{
-	background-color:#d6e5fc;
+#image{
+	height:100%;
+	width:100%;
+}
+
+#skilllist{
+	font-size:300%;
+}
+
+.b-orange{
+	color:#ff9335;
+	font-weight:bolder;
+}
+
+.centered{
+	text-align:center;
+}
+
+.leftalign{
+	text-align:left;
+}
+
+.stars{
+	float:right;
+	color:#002e7a;
+}
+
+.title{
+	color:#424447;
+	font-size:400%;
+	font-weight:bolder;
+}
+
+#skilltable{
+	background-color:#d1e2ff;
+}
+
+.skilltype{
+	font-size:150%;
+	font-weight:bold;
 }

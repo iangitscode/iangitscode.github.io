@@ -2,9 +2,11 @@
 <html lang="en">
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="main.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<div id="whoami" class="landing carousel slide darkback" data-ride="carousel">
@@ -20,7 +22,7 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
 
-					<div class="title">
+					<div class="header centered">
 						Ian Lai
 						<div class="subtitle"> Who am I? </div>
 					</div>
@@ -28,28 +30,28 @@
 				</div>
 
 				<div class="item">
-					<div class="title">
+					<div class="header centered">
 						Martial Artist
 					</div>
 					<img src="assets/tkd.jpg" alt="Martial Artist">
 				</div>
 
 				<div class="item">
-					<div class="title">
+					<div class="header centered">
 						Programmer
 					</div>
 					<img src="assets/cs.png" alt="Meta pic aha">
 				</div>
 
 				<div class="item">
-					<div class="title">
+					<div class="header centered">
 						Dragonboater
 					</div>
 					<img src="assets/db.jpg" alt="Dragonboater">
 				</div>
 
 				<div class="item">
-					<div class="title">
+					<div class="header centered">
 						24601
 					</div>
 					<img src="assets/24601.jpg" alt="24601">
@@ -58,13 +60,54 @@
 			</div>
 
 		</div> <!--Close Carousel-->
-		<div class="container">
+
+		<div class="container-fluid">
+			<div class="row leftpad">
+
+				<div class="col-md-8" id="aboutme">
+					My name is Ian Lai from Vancouver, Canada, and I am a 2B Computer Science student studying at the<span class="b-orange"> University of Waterloo</span>.<br>
+					I am insatiably passionate about programming because to me, it represents an opportunity to impact others' lives and make them a <span class="b-orange">little bit better</span>, be it through communication, automation, or entertainment.
+				</div>
+
+				<div class="col-md-3">
+					<img src="assets/me.jpg" class="img-rounded" id="image">
+				</div>
+
+			</div>
+			<br>
 			<div class="row">
-				<div class=".col-md-8 .col-md-offset-2 blueback text">
-					Welcome to my website! This is a placeholder page, as the full website is still under development. In the meantime, feel free to check out this game I built:
-					<a href="soccer/soccer.html"> Soccer Game </a>
+				<div class="col-md-6 col-md-offset-3 centered">
+					<span class="title"> Technical Skills </span> <br>
+					<table class="table" id="skilltable">
+
+						<tr>
+							<td class="leftalign"> HTML <span class="stars"> 5 </span> </td>
+							<td class="leftalign"> Bootstrap <span class="stars"> 3 </span> </td>
+							<td class="leftalign"> C++ <span class="stars"> 5 </span> </td>
+						</tr>
+
+						<tr>
+							<td class="leftalign"> CSS <span class="stars"> 4 </span> </td>
+							<td class="leftalign"> jQuery <span class="stars"> 3 </span> </td>
+							<td class="leftalign"> C <span class="stars"> 4 </span> </td>
+						</tr>
+
+						<tr>
+							<td class="leftalign"> Javascript <span class="stars"> 4 </span> </td>
+							<td class="leftalign"> Git <span class="stars"> 3 </span> </td>
+							<td class="leftalign"> BASH <span class="stars"> 5 </span> </td>
+						</tr>
+
+						<tr>
+							<td class="leftalign"> Java <span class="stars"> 4 </span> </td>
+							<td class="leftalign"> Python <span class="stars"> 4 </span> </td>
+							<td class="leftalign"> Racket <span class="stars"> 4 </span> </td>
+						</tr>
+
+					</table>
 				</div>
 			</div>
+
 		</div>
 
 	</body>

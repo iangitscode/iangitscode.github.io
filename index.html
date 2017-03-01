@@ -84,11 +84,11 @@
 					<img src="assets/me.jpg" class="img-rounded" id="image">
 				</div>
 
-			</div>
+			</div> <!--End aboutme row-->
 			<br><br>
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 centered">
-					<span class="title"> Technical Skills </span> <br><br>
+					<div class="title"> Technical Skills </div>
 					<table id="skilltable">
 
 						<tr>
@@ -117,9 +117,23 @@
 
 					</table>
 				</div>
+			</div> <!--End skills row-->
+
+			<div class="row">
+				<div class="title"> Projects </div>
+				
+				<div class="col-md-10 leftpad">
+					<iframe id="myframe" src="soccer/index.html"></iframe>
+					<div id="projectinfo">This is a small game I built with vanilla HTML, CSS, and Javascript, based on the Facebook Messenger game. It features a basic physics engine and a variable difficulty setting.</div>
+				</div>
+
+				<div class="col-md-2">
+					<div class="project" onclick="switchFrame(0)"> Soccer Game </div>
+					<div class="project" onclick="switchFrame(1)"> Node Graphing Tool </div>
+				</div>
 			</div>
 
-		</div>
+		</div> <!--End container-->
 
 	</body>
 </html>

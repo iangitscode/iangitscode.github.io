@@ -2,7 +2,7 @@ body{
 	max-width: 100%;
 	overflow-x:hidden;
 	font-family:Amiko;
-	background-color:#e5e5e5;
+	background-color:#f7f7f7;
 }
 
 .landing{
@@ -17,7 +17,7 @@ body{
 
 #aboutme{
 	background-color:#434549;
-	font-size:250%;
+	font-size:200%;
 	color:#fffaf7;
 	font-weight:bold;
 }
@@ -41,12 +41,6 @@ body{
 	font-weight:lighter;
 }
 
-.text{
-	font-size:350%;
-	color:#fffaf7;
-	font-weight:bold;
-}
-
 .darkback{
 	background-color:black;
 }
@@ -54,10 +48,6 @@ body{
 #image{
 	height:100px;
 	width:auto;
-}
-
-#skilllist{
-	font-size:300%;
 }
 
 .b-orange{
@@ -80,7 +70,7 @@ body{
 
 .title{
 	color:#424447;
-	font-size:400%;
+	font-size:200%;
 	font-weight:bolder;
 	text-align:center;
 	margin-top:50px;
@@ -91,11 +81,9 @@ body{
 	width:100%;
 	border-collapse:separate;
 	border-spacing:50px 20px;
-	font-size:175%;
 }
 
 .skilltype{
-	font-size:150%;
 	font-weight:bold;
 }
 
@@ -105,7 +93,6 @@ body{
 }
 
 .project{
-	/*border-style:solid;*/
 	height:100px;
 	margin-top:30px;
 	background-color:#649ffc;
@@ -120,5 +107,4 @@ body{
 
 #projectinfo{
 	height:16vh;
-	font-size:200%;
 }

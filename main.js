@@ -25,7 +25,7 @@ var projects = [
 	{link:'soccer/index.html',
 	 description:"This is a small game I built with vanilla HTML, CSS, and Javascript, based on the Facebook Messenger game.\
 	It features a basic physics engine and a variable difficulty setting."},
-	{link:'http://jonahdlin.com/graph/',
+	{link:'graph/index.html',
 	 description:"This a node graphing tool using HTML5 Canvas, building off concepts learned in Math 239.\
 	It features nodes that you can create, delete, move, and rename, and the ability to draw edges between nodes.\
 	The base structure of this project was created by Jonah Dlin."}

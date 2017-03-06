@@ -3,7 +3,6 @@ $(document).ready(function(){
 	$("#image").height($("#aboutme").height());
 	if($("#image").height()>window.innerHeight || $("#image").width()>window.innerWidth){
 		$("#image").width(window.innerWidth);
-		$("#image").height(window.innerWidth);
 	}
 });
 

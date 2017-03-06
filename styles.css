@@ -40,10 +40,6 @@ body{
 	text-align:center;
 }
 
-.skill{
-	padding-left:30px;
-}
-
 .subtitle{
 	font-size:50%;
 	font-weight:lighter;
@@ -85,7 +81,6 @@ body{
 }
 
 #skilllist{
-	font-size:110%;
 	font-weight:bold;
 }
 

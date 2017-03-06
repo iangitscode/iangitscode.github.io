@@ -1,8 +1,14 @@
 body{
 	max-width: 100%;
 	overflow-x:hidden;
-	font-family:Amiko;
-	background-color:#f7f7f7;
+	font-family:Roboto;
+	background-image: url("assets/texture.jpg");
+    background-repeat:repeat;
+}
+
+.titleimage{
+	height:100%;
+	width:100%;
 }
 
 .landing{
@@ -81,10 +87,7 @@ body{
 	width:100%;
 	border-collapse:separate;
 	border-spacing:50px 20px;
-}
-
-.skilltype{
-	font-weight:bold;
+	font-weight:bolder;
 }
 
 #myframe{
@@ -98,6 +101,8 @@ body{
 	background-color:#649ffc;
 	text-align:center;
 	font-size:150%;
+	padding-top:30px;
+	border-radius:30px;
 }
 
 .project:hover{
@@ -106,5 +111,11 @@ body{
 }
 
 #projectinfo{
-	height:16vh;
+	margin-top:30px;
+	padding-left:20px;
+	padding-right:20px;
+	border-radius:30px;
+	background-color:black;
+	color:white;
+	font-size:150%;
 }

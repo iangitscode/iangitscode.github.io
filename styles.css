@@ -6,7 +6,7 @@ body{
     background-repeat:repeat;
 }
 
-@media(min-width:60em){.header{font-size:100px}}
+@media(min-width:60em){.header{font-size:100px;}}
 
 .titleimage{
 	height:100%;

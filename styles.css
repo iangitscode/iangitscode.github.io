@@ -6,6 +6,8 @@ body{
     background-repeat:repeat;
 }
 
+@media(min-width:60em){.header{font-size: 50%}}
+
 .titleimage{
 	height:100%;
 	width:100%;

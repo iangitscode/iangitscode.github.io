@@ -6,7 +6,7 @@ body{
     background-repeat:repeat;
 }
 
-@media(min-width:60em){.header{font-size:100px;}}
+@media(min-width:300px;){.header{font-size:100px;}}
 
 .titleimage{
 	height:100%;
@@ -56,9 +56,10 @@ body{
 #image{
 	height:300px;
 	width:300px;
-	display: block;
+	display:block;
 	margin:auto;
 	margin-bottom:30px;
+
 }
 
 .b-orange{

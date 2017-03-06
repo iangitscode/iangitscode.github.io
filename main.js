@@ -1,9 +1,5 @@
 $(document).ready(function(){
 	fillStars();
-	$("#image").height($("#aboutme").height());
-	if($("#image").height()>window.innerHeight || $("#image").width()>window.innerWidth){
-		$("#image").width(window.innerWidth);
-	}
 });
 
 //Function to insert stars into elements with class 'star'

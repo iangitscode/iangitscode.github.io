@@ -54,9 +54,11 @@ body{
 }
 
 #image{
-	height:100px;
-	width:auto;
-	float:left;
+	height:300px;
+	width:300px;
+	display: block;
+	margin:auto;
+	margin-bottom:30px;
 }
 
 .b-orange{

@@ -38,7 +38,7 @@ body{
 	font-weight:bolder;
 }
 
-.leftpad{
+.skill{
 	padding-left:30px;
 }
 
@@ -54,6 +54,7 @@ body{
 #image{
 	height:100px;
 	width:auto;
+	padding-left:10px;
 }
 
 .b-orange{
@@ -83,11 +84,9 @@ body{
 	margin-bottom:40px;
 }
 
-#skilltable{
-	width:100%;
-	border-collapse:separate;
-	border-spacing:50px 20px;
-	font-weight:bolder;
+#skilllist{
+	font-size:150%;
+	font-weight:bold;
 }
 
 #myframe{

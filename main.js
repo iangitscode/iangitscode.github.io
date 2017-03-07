@@ -30,7 +30,6 @@ var projects = [
 	It features a basic physics engine and a variable difficulty setting."},
 	{link:'graph/index.html',
 	 description:"This is a node graphing tool built using HTML5 Canvas, based on concepts learned in Math 239.\
-	It features nodes that you can create, delete, move, and rename, and the ability to draw edges between nodes.\
 	This project was created in collaboration with Jonah Dlin."}
 ];
 

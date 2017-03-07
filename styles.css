@@ -8,7 +8,7 @@ body{
 }
 
 @media only screen and (max-width:45em){
-	.header{font-size:50%!important;}
+	.header{font-size:350%!important;}
 }
 
 .titleimage{

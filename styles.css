@@ -7,8 +7,8 @@ body{
     font-size:16px;
 }
 
-@media only screen and (max-width:100em){
-	.header{font-size:30%!important;}
+@media only screen and (max-width:45em){
+	.header{font-size:50%!important;}
 }
 
 .titleimage{
@@ -28,7 +28,7 @@ body{
 
 #aboutme{
 	background-color:#434549;
-	font-size:200%;
+	font-size:150%;
 	color:#fffaf7;
 	font-weight:bold;
 }

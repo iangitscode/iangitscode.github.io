@@ -15,30 +15,30 @@ function refreshCanvas() {
 		drawVertex(vtcs[i]);
 	}
 	for (var i = edges.length - 1; i >= 0; i--) {
-		drawLine(vtcs[edges[i].v1], vtcs[edges[i].v2]);
+		drawLine(edges[i]);
 	}
 }
 
 // creates the specified vertex
 function drawVertex(vtx) {
 	c.beginPath();
-	c.arc(vtx.x, vtx.y, vProps.r, 0, 2*Math.PI);
+	c.arc(vtx.x, vtx.y, vtx.r, 0, 2*Math.PI);
 	c.fillStyle = vtx.col;
 	c.fill();
-	c.strokeStyle = vProps.bColour;
-	c.lineWidth = vProps.bThickness;
+	c.strokeStyle = vtx.bcol;
+	c.lineWidth = vtx.bThickness;
 	c.stroke();
 	c.font = "15px Arial";
 	c.fillStyle = 'black';
-	c.fillText(vtx.name,vtx.x-vProps.r,vtx.y-(15+vProps.r));
+	c.fillText(vtx.name,vtx.x-vtx.r,vtx.y-(15+vtx.r));
 }
 
-function drawLine(orig, dest) {
+function drawLine(edge){
 	c.beginPath();
-	c.moveTo(orig.x, orig.y);
-	c.lineTo(dest.x, dest.y);
-	c.strokeStyle = eProps.colour;
-	c.lineWidth = eProps.thickness;
+	c.moveTo(vtcs[edge.v1].x, vtcs[edge.v1].y);
+	c.lineTo(vtcs[edge.v2].x, vtcs[edge.v2].y);
+	c.strokeStyle = edge.colour;
+	c.lineWidth = edge.thickness;
 	c.stroke();
 }
 

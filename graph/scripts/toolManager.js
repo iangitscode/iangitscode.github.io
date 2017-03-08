@@ -212,17 +212,32 @@ function bipartition(){
 	}
 
 	//Move vertices to show bipartism
-	//For laziness I will assume vertices will go only in two straight vertical lines
-	var thirdWidth=window.innerWidth*0.8/3;
-	var height=50;
+	var canvasHeight=$("#mainCanvas").height();
+	var canvasWidth=$("#mainCanvas").width();
+	var shortStart=false;
+	var yPos=2*Avtc[0].r;
+	var xPos=canvasWidth/3;
 	for(var i=0;i<Avtc.length;i++){
-		Avtc[i].move(2000,thirdWidth,height);
-		height+=4*vProps.r;
+		if(yPos>canvasHeight-Avtc[i].r){
+			yPos=2*Avtc[0].r;
+			shortStart=!shortStart;
+			if(shortStart) yPos+=Avtc[0].r;
+			xPos-=4*Avtc[i].r;
+		}
+		Avtc[i].move(2000,xPos,yPos);
+		yPos+=4*Avtc[i].r;
 	}
-	height=50;
+	yPos=2*Avtc[0].r;
+	xPos=2*canvasWidth/3;
 	for(var i=0;i<Bvtc.length;i++){
-		Bvtc[i].move(2000,2*thirdWidth,height);
-		height+=4*vProps.r;
+		if(yPos>canvasHeight-Bvtc[i].r){
+			yPos=2*Avtc[0].r;
+			shortStart=!shortStart;
+			if(shortStart) yPos+=Avtc[0].r;
+			xPos+=4*Bvtc[i].r;
+		}
+		Bvtc[i].move(2000,xPos,yPos);
+		yPos+=4*Bvtc[i].r;
 	}
 	console.log("Avtc=",Avtc);
 	console.log("Bvtc=",Bvtc);

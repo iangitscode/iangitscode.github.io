@@ -115,5 +115,6 @@ body{
 	border-radius:30px;
 	background-color:black;
 	color:white;
-	font-size:150%;
+	font-size:120%;
+	display:flex;
 }

@@ -23,17 +23,36 @@ function fillStars(){
 }
 
 //Function to switch the current view in the iframe
-
-var projects = [
-	{link:'soccer/index.html',
-	 description:"This is a small game I built with vanilla HTML, CSS, and Javascript, based on the Facebook Messenger game.\
-	It features a basic physics engine and a variable difficulty setting."},
-	{link:'graph/index.html',
-	 description:"This is a node graphing tool built using HTML5 Canvas, based on concepts learned in Math 239.\
-	This project was created in collaboration with Jonah Dlin."}
-];
-
 function switchFrame(id){
-	document.getElementById("myframe").setAttribute("src",projects[id].link);
-	document.getElementById("projectinfo").innerHTML=projects[id].description;
+	var link="";
+	switch(id){
+		case 0:
+			link="soccer/index.html";
+			break;
+		case 1:
+			link="redirectToGraph.html";
+			break;
+	}
+	document.getElementById("myframe").setAttribute("src",link);
+}
+
+//Function to reveal the project info
+//Assumes that there the project info node is the second child of obj
+function overlay(obj){
+	obj.childNodes[1].style.opacity=0.9;
+}
+
+//Function to hide the passed in node
+function hide(obj){
+	obj.style.opacity=0;
+}
+
+//Function to open the iframe in a new tab
+function createTab(){
+	var link=document.getElementById("myframe").getAttribute("src");
+	console.log(link);
+	if(link != ""){
+		var win = window.open(link, '_blank');
+		win.focus();
+	}
 }

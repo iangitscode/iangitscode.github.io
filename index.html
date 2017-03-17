@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body>
-		<div id="whoami" class="landing carousel slide darkback" data-ride="carousel">
+		<div id="whoami" class="landing vcenter carousel slide darkback" data-ride="carousel">
 
 			<ol class="carousel-indicators">
 				<li data-target="#whoami" data-slide-to="0" class="active"></li>
@@ -18,7 +18,7 @@
 				<li data-target="#whoami" data-slide-to="2"></li>
 				<li data-target="#whoami" data-slide-to="3"></li>
 				<li data-target="#whoami" data-slide-to="4"></li>
-			</ol>
+			</ol> 
 
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
@@ -84,7 +84,7 @@
 				<div class="col-md-4 col-md-offset-4 col-xs-12" id="aboutme">
 					My name is Ian Lai from Vancouver, Canada, and I am a 2B Computer Science student studying at the
 					<span class="b-orange"> University of Waterloo</span>.<br>
-					I am crazily passionate about programming because to me, it represents an endless series of problems to <span class="b-orange">provoke, challenge, and mentally stimulate</span> me.
+					I am incredibly passionate about programming because it represents an endless series of problems to <span class="b-orange">provoke, challenge, and mentally stimulate</span> me.
 				</div>
 			</div> <!--End aboutme row-->
 
@@ -127,9 +127,15 @@
 				</div>
 
 				<div class="col-md-2">
-					<div class="project" onclick="switchFrame(0)"> Soccer Game </div>
-					<div class="project" onclick="switchFrame(1)"> Node Graphing Tool </div>
-					<div id="projectinfo">Click on a project above to check it out!</div>
+
+					<div id="fullScreen" class="vcenter" onclick="createTab()"> Show Current in New Tab </div>
+
+					<div class="project vcenter" onclick="switchFrame(0)" onmouseover="overlay(this)"> Soccer Game 
+						<span class="projectinfo" onmouseout="hide(this)"> A small game I built with vanilla HTML, CSS, and Javascript, based on the Facebook Messenger game.</span>
+					</div>
+					<div class="project vcenter" onclick="switchFrame(1)" onmouseover="overlay(this)"> Node Graphing Tool
+						<span class="projectinfo" onmouseout="hide(this)"> A node graphing tool created in collaboration with Jonah Dlin. </span>
+					 </div>
 				</div>
 			</div>
 

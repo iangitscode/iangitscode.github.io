@@ -1,145 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta name="viewport" content="width=device-width, user-scalable=0" />
-		<title>Ian Lai</title>
+		<title>
+		Ian Lai
+		</title>
+		<link href="https://fonts.googleapis.com/css?family=BenchNine:300" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="main.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="main.js"></script>
 	</head>
-	<body>
-		<div id="whoami" class="landing vcenter carousel slide darkback" data-ride="carousel">
+<body>
 
-			<ol class="carousel-indicators">
-				<li data-target="#whoami" data-slide-to="0" class="active"></li>
-				<li data-target="#whoami" data-slide-to="1"></li>
-				<li data-target="#whoami" data-slide-to="2"></li>
-				<li data-target="#whoami" data-slide-to="3"></li>
-				<li data-target="#whoami" data-slide-to="4"></li>
-			</ol> 
+	<div id="navmenu">
+		<span id="ianlai" onclick="changecontent(0)">
+			Ian Lai
+		</span>
 
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
+		<span class="navtab" onclick="changecontent(1)">
+			Who am I?
+		</span>
+		
+		<span class="navtab" onclick="toggleSkills()">
+			Skills
+		</span>
 
-					<div class="header">
-						Ian Lai
-						<div class="subtitle"> Who am I? </div>
-					</div>
-					<img class="titleimage" src="assets/sunpeaks.jpg" alt="Ian Lai">
+		<span id="projectTab" class="navtab" onclick="toggleProjects()">
+			Projects
+			<div id="projectList">
+				<div class="project" onclick="switchProject(0,false)">
+					Soccer Game 
+						<img class="newtab" onclick="switchProject(0,true)" src="assets/link-new-tab.png">
 				</div>
-
-				<div class="item">
-					<div class="header">
-						Martial Artist
-					</div>
-					<img class="titleimage" src="assets/tkd.jpg" alt="Martial Artist">
+				<div class="project" onclick="switchProject(1,false)">
+					Graphing Tool
+						<img class="newtab" onclick="switchProject(1,true)" src="assets/link-new-tab.png">
 				</div>
-
-				<div class="item">
-					<div class="header">
-						Programmer
-					</div>
-					<img class="titleimage" src="assets/cs.png" alt="Meta pic aha">
-				</div>
-
-				<div class="item">
-					<div class="header">
-						Dragonboater
-					</div>
-					<img class="titleimage" src="assets/db.jpg" alt="Dragonboater">
-				</div>
-
-				<div class="item">
-					<div class="header">
-						24601
-					</div>
-					<img class="titleimage" src="assets/24601.jpg" alt="24601">
-				</div>
-
 			</div>
+		</span>
 
-			<a class="left carousel-control" href="#whoami" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			
-			<a class="right carousel-control" href="#whoami" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
+		<span class="navtab" onclick="changecontent(2)">
+			Contact Me
+		</span>
+	</div> <!--Close navmenu-->
 
+	<div id="contentbox">
+
+		<div id="aboutme" class="content">
+			My name is Ian Lai from Vancouver, Canada, and I am a 2B Computer Science student studying at the
+			<span class="b-orange"> University of Waterloo</span>.
+			I am incredibly passionate about programming because it represents an endless series of problems to <span class="b-orange">provoke, challenge, and mentally stimulate</span> me.
+		</div> <!--Close aboutme-->
+
+		<div id="carouselBox" class="content">
+			<div id="whoami" class="landing carousel slide" data-ride="carousel">
+
+				<ol class="carousel-indicators">
+					<li data-target="#whoami" data-slide-to="0" class="active"></li>
+					<li data-target="#whoami" data-slide-to="1"></li>
+					<li data-target="#whoami" data-slide-to="2"></li>
+					<li data-target="#whoami" data-slide-to="3"></li>
+				</ol> 
+
+				<div class="carousel-inner" role="listbox">
+				
+					<div class="item active">
+						<div class="thingsido">
+							Martial Artist
+						</div>
+						<img class="titleimage" src="assets/tkd.jpg" alt="Martial Artist">
+					</div>
+
+					<div class="item">
+						<div class="thingsido">
+							Programmer
+						</div>
+						<img class="titleimage" src="assets/cs.png" alt="Meta pic aha">
+					</div>
+
+					<div class="item">
+						<div class="thingsido">
+							Dragonboater
+						</div>
+						<img class="titleimage" src="assets/db.jpg" alt="Dragonboater">
+					</div>
+
+					<div class="item">
+						<div class="thingsido">
+							24601
+						</div>
+						<img class="titleimage" src="assets/24601.jpg" alt="24601">
+					</div>
+
+				</div>
+
+				<a class="left carousel-control" href="#whoami" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				
+				<a class="right carousel-control" href="#whoami" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+
+			</div> 
 		</div> <!--Close Carousel-->
 
-		<div class="container-fluid">
+		<div id="iframebox" class="content">
+			<iframe id="myframe" seamless="seamless" frameBorder="0" src=""></iframe>
+		</div>
+	</div>	<!--Close Content Box-->
 
-			<div class="row">
-				<div class="col-md-4 col-md-offset-4 col-xs-12">
-					<img src="assets/me.jpg" id="image">
-				</div>
-			</div> <!--End picture row-->
-
-			<div class="row">
-				<div class="col-md-4 col-md-offset-4 col-xs-12" id="aboutme">
-					My name is Ian Lai from Vancouver, Canada, and I am a 2B Computer Science student studying at the
-					<span class="b-orange"> University of Waterloo</span>.<br>
-					I am incredibly passionate about programming because it represents an endless series of problems to <span class="b-orange">provoke, challenge, and mentally stimulate</span> me.
-				</div>
-			</div> <!--End aboutme row-->
-
-			<br>
-			<div class="title"> Technical Skills </div>
-			<div class="row" id="skilllist">
-				<div class="col-md-2 col-md-offset-2 col-xs-12">
-					<div class="skill"> HTML <span class="stars"> 5 </span> </div>
-					<div class="skill"> CSS <span class="stars"> 5 </span> </div>
-					<div class="skill"> Javascript <span class="stars"> 5 </span> </div>
-					
-					
-				</div>
-
-				<div class="col-md-2 col-xs-12">
-					<div class="skill"> Bootstrap <span class="stars"> 3 </span> </div>
-					<div class="skill"> jQuery <span class="stars"> 4 </span> </div>
-					<div class="skill"> Python <span class="stars"> 4 </span> </div>
-					
-				</div>
-
-				<div class="col-md-2 col-xs-12">
-					<div class="skill"> C <span class="stars"> 4 </span> </div>
-					<div class="skill"> C++ <span class="stars"> 5 </span> </div>
-					<div class="skill"> BASH <span class="stars"> 4 </span> </div>
-				</div>
-
-				<div class="col-md-2 col-xs-12">
-					<div class="skill"> Java <span class="stars"> 4 </span> </div>					
-					<div class="skill"> Racket <span class="stars"> 5 </span> </div>
-					<div class="skill"> Teaching <span class="stars"> 5 </span> </div>
-				</div>
-			</div> <!--End skills row-->
-
-			<div class="row">
-				<div class="title"> Projects </div>
-				
-				<div class="col-md-10 leftpad">
-					<iframe id="myframe" seamless="seamless" frameBorder="0" src=""></iframe>
-				</div>
-
-				<div class="col-md-2">
-
-					<div id="fullScreen" class="vcenter" onclick="createTab()"> Show Current in New Tab </div>
-
-					<div class="project vcenter" onclick="switchFrame(0)" onmouseover="overlay(this)"> Soccer Game 
-						<span class="projectinfo" onmouseout="hide(this)"> A small game I built with vanilla HTML, CSS, and Javascript, based on the Facebook Messenger game.</span>
-					</div>
-					<div class="project vcenter" onclick="switchFrame(1)" onmouseover="overlay(this)"> Node Graphing Tool
-						<span class="projectinfo" onmouseout="hide(this)"> A node graphing tool created in collaboration with Jonah Dlin. </span>
-					 </div>
-				</div>
+	<div id="skilltable">
+		<div class="skillcolumn">
+			<div class="skill">
+				HTML <span class="strength"> 5 </span>
 			</div>
 
-		</div> <!--End container-->
+			<div class="skill">
+				CSS <span class="strength"> 5 </span>
+			</div>
 
-	</body>
+			<div class="skill">
+				Javascript <span class="strength"> 5 </span>
+			</div>
+
+			<div class="skill">
+				Bootstrap <span class="strength"> 3 </span>
+			</div>
+		</div>
+
+		<div class="skillcolumn">
+			<div class="skill">
+				jQuery <span class="strength"> 4 </span>
+			</div>
+
+			<div class="skill">
+				Python <span class="strength"> 4 </span>
+			</div>
+
+			<div class="skill">
+				C <span class="strength"> 4 </span>
+			</div>
+
+			<div class="skill">
+				C++ <span class="strength"> 5 </span>
+			</div>
+		</div>
+
+		<div class="skillcolumn">
+			<div class="skill">
+				BASH <span class="strength"> 4 </span>
+			</div>
+
+			<div class="skill">
+				Java <span class="strength"> 4 </span>
+			</div>
+
+			<div class="skill">
+			Racket <span class="strength"> 5 </span>
+			</div>
+
+			<div class="skill">
+			Teaching <span class="strength"> 5 </span>
+			</div>
+		</div>
+	</div><!--Close Skilltable-->
+</body>
 </html>
+
+
+

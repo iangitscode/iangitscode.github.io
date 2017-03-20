@@ -1,0 +1,133 @@
+body{
+	max-width: 100%;
+	overflow-x:hidden;
+	font-family:Roboto;
+	background-image: url("assets/texture.jpg");
+    background-repeat:repeat;
+    font-size:16px;
+}
+
+@media only screen and (max-width:45em){
+	.header{font-size:350%!important;}
+}
+
+.vcenter{
+	justify-content:center;
+	align-items:center;
+	display:flex;
+	flex-direction:column;
+}
+
+.titleimage{
+	height:100%;
+	width:100%;
+}
+
+.landing{
+	height:100vh;
+	width:100vw;
+	margin-bottom:4em;
+}
+
+#aboutme{
+	background-color:#434549;
+	font-size:150%;
+	color:#fffaf7;
+	font-weight:bold;
+}
+
+.header{
+	position:absolute;
+	top:25%;
+	width:100%;
+	font-family:Merriweather;
+	color:white;
+	font-size:700%;
+	font-weight:bolder;
+	text-align:center;
+}
+
+.subtitle{
+	font-size:50%;
+	font-weight:lighter;
+}
+
+.darkback{
+	background-color:black;
+}
+
+#image{
+	height:300px;
+	width:300px;
+	display:block;
+	margin:auto;
+	margin-bottom:30px;
+}
+
+.b-orange{
+	color:#ff9335;
+	font-weight:bolder;
+}
+
+.leftalign{
+	text-align:left;
+}
+
+.stars{
+	float:right;
+	color:#002e7a;
+}
+
+.title{
+	color:#424447;
+	font-size:200%;
+	font-weight:bolder;
+	text-align:center;
+	margin-top:50px;
+	margin-bottom:40px;
+}
+
+#skilllist{
+	font-weight:bold;
+}
+
+#myframe{
+	height:83vh;
+	width:100%;
+}
+
+#fullScreen{
+	height:75px;
+	background-color:#42f48f;
+	border-radius:50px;
+}
+
+#fullScreen:hover{
+	background-color:#2db76a
+}
+
+.project{ 
+	height:150px;
+	margin-top:20px;
+	background-color:#649ffc;
+	text-align:center;
+	font-size:150%;
+	border-radius:50px;
+	position:relative;
+	box-shadow:1px 1px black;
+}
+
+.projectinfo{
+	color:white;
+	font-size:70%;
+	opacity:0.0;
+	background-color:#3271d3;
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:100%;
+	border-radius:inherit;
+	padding-top:20px;
+	transition:opacity 0.75s;
+}

@@ -1,29 +1,79 @@
 $(document).ready(function(){
-	fillStars();
-	if($("#image").height()>window.innerHeight || $("#image").width()>window.innerWidth){
-		$("#image").width(window.innerWidth);
-		$("#image").height(window.innerWidth);
-	}
+	document.getElementById("aboutme").style.display="block";
+	fillSkills();
 });
 
-//Function to insert stars into elements with class 'star'
-//Glyphicons courtesy of http://glyphicons.com/ :)
-function fillStars(){
-	var stars=$(".stars")
-	$.each(stars, function(index, value) {
-  		var number=parseInt(this.innerHTML);
-  		var fullstar="<span class='glyphicon glyphicon-star'></span>";
-  		var emptystar="<span class='glyphicon glyphicon-star-empty'></span>";
-  		this.innerHTML="";
-  		for(var x=0;x<5;x++){
-  			if(x<number) this.innerHTML+=fullstar;
-  			else this.innerHTML+=emptystar;
-  		}
+//Function to hide all elements with a 'content' class
+function hideContent(){
+	var contents=document.getElementsByClassName("content");
+	$.each(contents, function(index, element) {
+		element.style.display="none";
 	});
 }
 
-//Function to switch the current view in the iframe
-function switchFrame(id){
+//Function to show the appropriate content
+function changecontent(id){
+	hideContent();
+	switch(id){
+		case 0:
+			document.getElementById("aboutme").style.display="block";
+			break;
+		case 1:
+			document.getElementById("carouselBox").style.display="block";
+			break;
+	}
+}
+
+//Function to insert boxes into elements with class 'skill'
+function fillSkills(){
+	var skills=$(".strength")
+	$.each(skills, function(index, value) {
+		var number=parseInt(this.innerHTML);
+		var fullBox="<span class='fullBox'></span>";
+		var emptyBox="<span class='emptyBox'></span>";
+		this.innerHTML="";
+		for(var x=0;x<5;x++){
+			if(x<number) this.innerHTML+=fullBox;
+			else this.innerHTML+=emptyBox;
+		}
+	});
+}
+
+var showingSkills=false;
+//Function to toggle whether or not the skills are showing
+function toggleSkills(){
+	if(showingProjects){
+		toggleProjects();
+	}
+	showingSkills=!showingSkills;
+	if(showingSkills){
+		document.getElementById("skilltable").style.maxHeight="200px";
+	}else{
+		document.getElementById("skilltable").style.maxHeight="0px";
+	}
+}
+
+var showingProjects=false;
+//Function to toggle whether or not the project list is showing
+function toggleProjects(){
+	if(showingSkills){
+		toggleSkills();
+	}
+	showingProjects=!showingProjects;
+	var projects=document.getElementsByClassName("project");
+	$.each(projects,function(index,element){
+		if(showingProjects){
+			element.style.maxHeight="100px";
+		}else{
+			element.style.maxHeight="0px";
+		}
+	});
+}
+
+//Function to display the appropriate project
+function switchProject(id,newTab){
+	hideContent();
+	document.getElementById("iframebox").style.display="block";
 	var link="";
 	switch(id){
 		case 0:
@@ -33,26 +83,10 @@ function switchFrame(id){
 			link="redirectToGraph.html";
 			break;
 	}
-	document.getElementById("myframe").setAttribute("src",link);
-}
-
-//Function to reveal the project info
-//Assumes that there the project info node is the second child of obj
-function overlay(obj){
-	obj.childNodes[1].style.opacity=0.9;
-}
-
-//Function to hide the passed in node
-function hide(obj){
-	obj.style.opacity=0;
-}
-
-//Function to open the iframe in a new tab
-function createTab(){
-	var link=document.getElementById("myframe").getAttribute("src");
-	console.log(link);
-	if(link != ""){
+	if(newTab){
 		var win = window.open(link, '_blank');
 		win.focus();
+	}else{
+	document.getElementById("myframe").setAttribute("src",link);
 	}
 }

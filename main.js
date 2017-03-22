@@ -21,6 +21,9 @@ function changecontent(id){
 		case 1:
 			document.getElementById("carouselBox").style.display="block";
 			break;
+		case 2:
+			document.getElementById("contactBox").style.display="block";
+			break;
 	}
 }
 
@@ -42,12 +45,9 @@ function fillSkills(){
 var showingSkills=false;
 //Function to toggle whether or not the skills are showing
 function toggleSkills(){
-	if(showingProjects){
-		toggleProjects();
-	}
 	showingSkills=!showingSkills;
 	if(showingSkills){
-		document.getElementById("skilltable").style.maxHeight="200px";
+		document.getElementById("skilltable").style.maxHeight="180px";
 	}else{
 		document.getElementById("skilltable").style.maxHeight="0px";
 	}
@@ -56,14 +56,11 @@ function toggleSkills(){
 var showingProjects=false;
 //Function to toggle whether or not the project list is showing
 function toggleProjects(){
-	if(showingSkills){
-		toggleSkills();
-	}
 	showingProjects=!showingProjects;
 	var projects=document.getElementsByClassName("project");
 	$.each(projects,function(index,element){
 		if(showingProjects){
-			element.style.maxHeight="100px";
+			element.style.maxHeight="70px";
 		}else{
 			element.style.maxHeight="0px";
 		}

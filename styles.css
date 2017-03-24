@@ -166,6 +166,10 @@ body{
 	width:25px;
 }
 
+.newtab:hover{
+	filter:brightness(50%);
+}
+
 #flexBox{
 	display:flex;
 	justify-content:space-around;

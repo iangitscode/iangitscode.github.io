@@ -1,5 +1,20 @@
+var showingSkills=false;
+var showingProjects=false;
+var currSlide=0;
+var slides;
+
 $(document).ready(function(){
+	$("#skilltable").hide();
+
 	document.getElementById("aboutme").style.display="block";
+	slides=document.getElementsByClassName("item");
+	updateSlides();
+	setInterval(function(){
+		var maxSlides=slides.length;
+		currSlide++;
+		if(currSlide==maxSlides) currSlide=0;
+		updateSlides();
+	},3000);
 	fillSkills();
 });
 
@@ -42,18 +57,12 @@ function fillSkills(){
 	});
 }
 
-var showingSkills=false;
 //Function to toggle whether or not the skills are showing
 function toggleSkills(){
 	showingSkills=!showingSkills;
-	if(showingSkills){
-		document.getElementById("skilltable").style.maxHeight="180px";
-	}else{
-		document.getElementById("skilltable").style.maxHeight="0px";
-	}
+	$("#skilltable").animate({height: 'toggle'});
 }
 
-var showingProjects=false;
 //Function to toggle whether or not the project list is showing
 function toggleProjects(){
 	showingProjects=!showingProjects;
@@ -86,4 +95,12 @@ function switchProject(id,newTab){
 	}else{
 	document.getElementById("myframe").setAttribute("src",link);
 	}
+}
+
+//Function to make the only the /current/ slide visible
+function updateSlides(){
+	$.each(slides,function(index,slide){
+		slide.style.display="none";
+	});
+	slides[currSlide].style.display="block";
 }

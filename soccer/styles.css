@@ -69,14 +69,12 @@ body{
 
 #slider[type=range]{
 	-webkit-appearance:none;
-	width:70%;
+	width:100%;
+	margin-top:10px;
 	height:30px;
 	border-radius:10px;
 	z-index:2;
 	display:none;
-	margin-top:30%;
-	margin-left:15%;
-	position:absolute;
 }
 
 #slider[type=range]::-webkit-slider-runnable-track { 

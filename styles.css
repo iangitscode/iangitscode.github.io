@@ -1,5 +1,4 @@
 body{
-	background-image:url("assets/background.jpg");
 	font-family: 'BenchNine', sans-serif;
 	font-size:24pt;
 }
@@ -54,38 +53,50 @@ body{
 	text-decoration-color: #f29c24;
 }
 
-#contentbox{
-	margin-left:50px;
-	background-color:rgba(0,0,0,0.2);
-	color:white;
-	max-height:70%;
-	max-width:50%;
-	padding:20px;
-	-webkit-transition: height 0.5s, width 0.5s;
-	transition: height 0.5s, width 0.5s;
+.contentBox{
+	width:100%;
+	height:70%;
+	display:flex;
+	justify-content:space-around;
+	align-content:center;
+	text-align:center;
+	flex-wrap:wrap;
 }
 
 .content{
 	display:none;
+	background-color:rgba(0,0,0,0.2);
+	color:white;
+	padding:20px;
+	max-width:50%;
+}
+
+.item{
+	display:none;
+}
+
+.titleimage{
+	height:100%;
+	width:100%;
 }
 
 .thingsido{
-	position:absolute;
-	top:30%;
-	width:100%;
 	text-align:center;
 	font-size:48pt;
+}
+
+#myframe{
+	height:600px;
+	width:800px;
 }
 
 #skilltable{
 	position:absolute;
 	overflow-y:hidden;
 	bottom:0px;
-	height:200px;
-	max-height:0px;
 	width:100%;
-	-webkit-transition: max-height 0.5s linear;
-	transition: max-height 0.5s linear;
+	-webkit-transition: max-height 1s ease-out;
+	transition: max-height 1s ease-out;
 	background-color:#f4f4ff;
 	display:flex;
 	justify-content:space-around;
@@ -120,14 +131,8 @@ body{
 	margin-left:10px;
 }
 
-#myframe{
-	height:600px;
-	width:100%;
-}
-
 #projectList{
 	position:absolute;
-	z-index:1;
 }
 
 #projectTab{
@@ -172,4 +177,5 @@ body{
 	height:100px;
 	width:100px;
 	border-radius:10px;
+	margin:10px;
 }

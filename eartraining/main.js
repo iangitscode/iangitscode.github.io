@@ -57,7 +57,7 @@ function generateFlat(index){
 function generateSharp(index){
 	var originalFreq=notes[index].freq;
 	var prevFreq=notes[index+1].freq;
-	var oneTenth=(originalFreq-prevFreq)/10;
+	var oneTenth=(prevFreq-originalFreq)/10;
 	return originalFreq+(Math.floor(Math.random()*7)+1+minDistance)*oneTenth;
 }
 

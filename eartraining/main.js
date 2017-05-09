@@ -19,22 +19,31 @@ var currentTargetNote;
 var currentOutputFreq;
 var currentAnswer;
 
-var playDuration=500;
+var playDuration=0.75;
 
-var minDistance=2;
+var minDistance=3;
 
 var score=0;
 
 function playNote(freq){
 	var note=c.createOscillator();
-	note.frequency.value=freq;
+	var gainNode = c.createGain();
+	gainNode.connect(c.destination);
+	note.connect(gainNode);
 
-	note.connect(c.destination);
-	note.start(0);
+	note.frequency.value=freq;
+	gainNode.gain.setValueAtTime(0.0001,c.currentTime);
+	gainNode.gain.exponentialRampToValueAtTime(1, c.currentTime + 0.2);
+
+	note.start();
 
 	setTimeout(function(){
-		note.stop(0);
-	},playDuration);
+		gainNode.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + playDuration);
+		setTimeout(function(){
+			note.stop();
+		}, playDuration*1000);
+	},playDuration*1000);
+
 }
 
 function pickNote(){
@@ -50,7 +59,7 @@ function generateFlat(index){
 	var originalFreq=notes[index].freq;
 	var prevFreq=notes[index-1].freq;
 	var oneTenth=(originalFreq-prevFreq)/10;
-	return originalFreq-(Math.floor(Math.random()*7)+1+minDistance)*oneTenth;
+	return originalFreq-(Math.floor(Math.random()*(9-minDistance))+1+minDistance)*oneTenth;
 }
 
 //generates a note slightly sharper than the note index given
@@ -58,14 +67,14 @@ function generateSharp(index){
 	var originalFreq=notes[index].freq;
 	var prevFreq=notes[index+1].freq;
 	var oneTenth=(prevFreq-originalFreq)/10;
-	return originalFreq+(Math.floor(Math.random()*7)+1+minDistance)*oneTenth;
+	return originalFreq+(Math.floor(Math.random()*(9-minDistance))+1+minDistance)*oneTenth;
 }
 
 function replay(){
 	document.getElementById("replay").disabled=true;
 	setTimeout(function(){
 		document.getElementById("replay").disabled=false;
-	},playDuration);
+	},playDuration*1000);
 	playNote(currentOutputFreq);
 }
 

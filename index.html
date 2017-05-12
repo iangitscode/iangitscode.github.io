@@ -1,156 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<title>
-		Ian Lai
-		</title>
-		<link href="https://fonts.googleapis.com/css?family=BenchNine:300" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="styles.css">
-		<script src="main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="main.js"></script>
+	<title> Ian Lai </title>
+	<link rel="icon" href="">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
-<body>
-
-	<div id="navmenu">
-		<span id="ianlai" onclick="changecontent(0)">
-			Ian Lai
-		</span>
-
-		<span class="navtab" onclick="changecontent(1)">
-			Who am I?
-		</span>
-		
-		<span class="navtab" onclick="toggleSkills()">
-			Skills
-		</span>
-
-		<span id="projectTab" class="navtab" onclick="toggleProjects()">
-			Projects
-			<div id="projectList">
-				<div class="project" onclick="switchProject(0,false)">
-					Soccer Game 
-						<img class="newtab" onclick="switchProject(0,true)" src="assets/link-new-tab.png">
-				</div>
-				<div class="project" onclick="switchProject(1,false)">
-					Graphing Tool
-						<img class="newtab" onclick="switchProject(1,true)" src="assets/link-new-tab.png">
-				</div>
-			</div>
-		</span>
-
-		<span class="navtab" onclick="changecontent(2)">
-			Contact Me
-		</span>
-	</div> <!--Close navmenu-->
-
-	<div id="aboutme" class="content">
-			My name is Ian Lai from Vancouver, Canada, and I am a 2B Computer Science student studying at the
-			<span class="b-orange"> University of Waterloo</span>.
-			I am incredibly passionate about programming because it represents an endless series of problems to <span class="b-orange">provoke, challenge, and mentally stimulate</span> me.
-		</div> <!--Close aboutme-->
-
-	<div class="contentBox">
-		<div id="carouselBox" class="content">
-			<div class="item">
-				<div class="thingsido">
-					Martial Artist
-				</div>
-				<img class="titleimage" src="assets/tkd.jpg" alt="Martial Artist">
-			</div>
-
-			<div class="item">
-				<div class="thingsido">
-					Programmer
-				</div>
-				<img class="titleimage" src="assets/cs.png" alt="Meta pic aha">
-			</div>
-
-			<div class="item">
-				<div class="thingsido">
-					Dragonboater
-				</div>
-				<img class="titleimage" src="assets/db.jpg" alt="Dragonboater">
-			</div>
-
-			<div class="item">
-				<div class="thingsido">
-					24601
-				</div>
-				<img class="titleimage" src="assets/24601.jpg" alt="24601">
-			</div>
-		</div> <!--Close Carousel-->
-
-		<div id="iframebox" class="content">
-			<iframe id="myframe" seamless="seamless" frameBorder="0" src=""></iframe>
-		</div>
-
-		<div id="contactBox" class="content">
-			<div id="flexBox">
-				<a href="https://www.facebook.com/ian.lai.560" target="_blank"><img src="assets/bw_facebook.png" class="contactpic"></a>
-				<a href="https://www.linkedin.com/in/ian-lai-244971112/" target="_blank"><img src="assets/linkedin_bw.png" class="contactpic"></a>
-				<a href="mailto:ianlaiuw@gmail.com"><img src="assets/email.png" class="contactpic"></a>
-				<a href="https://github.com/snipower" target="_blank"><img src="assets/github-mark.png" class="contactpic"></a>
-			</div>
-		</div>
-	</div>
-
-	<div id="skilltable">
-		<div class="skillcolumn">
-			<div class="skill">
-				HTML <span class="strength"> 5 </span>
-			</div>
-
-			<div class="skill">
-				CSS <span class="strength"> 5 </span>
-			</div>
-
-			<div class="skill">
-				Javascript <span class="strength"> 5 </span>
-			</div>
-
-			<div class="skill">
-				Bootstrap <span class="strength"> 3 </span>
+	<body>
+		<div id="top"></div>
+		<p class="title">Hi :) I'm Ian.</p>
+		<nav id="buttonContainer">
+			<a class="button" href="#aboutmeBox">About Me</a>
+			<a class="button" href="#projectsBox">Projects</a>
+			<a class="button" href="#contactBox">Contact Me</a>
+		</nav>
+		<div id="aboutmeBox" class="contentBox">
+			<div class="text">
+				<p>
+				Welcome to my website. I'm at your service, sir (or madam). Here's a bit about me!
+				</p>
+				<p>
+				I study Computer Science at the University of Waterloo <br>
+				I am in my 2B term <br> 
+				I code things! <br>
+				I coach a recreational dragonboat team at the University<br>
+				I have a first dan black belt in Taekwondo <br>
+				I am a huge fan of Hamilton and Les Mis <br>
+				I play the trombone and the piano <br>
+				</p>
+				<p>
+				Feel free to check out some things I've worked on over the last while!
 			</div>
 		</div>
 
-		<div class="skillcolumn">
-			<div class="skill">
-				jQuery <span class="strength"> 4 </span>
+		<div id="projectsBox" class="contentBox">
+			<div class="project">
+				<img src="assets/graph.png" class="projectPic">
+				<div class="projectTitle">GraphEz</div>
+				<div class="overlay">A graph theory tool that I built in collaboration with Jonah Dlin. It utilises a tool based system to manipulate the graph. Canvas was used to display the nodes and edges, and Javascript and jQuery were used for the logic.</div>
 			</div>
 
-			<div class="skill">
-				Python <span class="strength"> 4 </span>
+			<div class="project">
+				<img src="assets/ball.png" class="projectPic">
+				<div class="projectTitle">Soccer Game</div>
+				<div class="overlay">A simple game with a basic physics engine I built from scratch, based on the Facebook Messenger soccer game. This was one of my first Javascript projects.
+				</div>
 			</div>
 
-			<div class="skill">
-				C <span class="strength"> 4 </span>
-			</div>
-
-			<div class="skill">
-				C++ <span class="strength"> 5 </span>
+			<div class="project">
+				<img src="assets/music.png" class="projectPic">
+				<div class="projectTitle">Ear Training Tool</div>
+				<div class="overlay">A tool designed to develop and fine tune <!--pun intended--> pitch recognition skills. Web Audio API was used to connect to the client's speakers and produce a sound at the correct frequency. This project is still under development.</div>
 			</div>
 		</div>
 
-		<div class="skillcolumn">
-			<div class="skill">
-				BASH <span class="strength"> 4 </span>
-			</div>
-
-			<div class="skill">
-				Java <span class="strength"> 4 </span>
-			</div>
-
-			<div class="skill">
-			Racket <span class="strength"> 5 </span>
-			</div>
-
-			<div class="skill">
-			Teaching <span class="strength"> 5 </span>
-			</div>
+		<div class="contentBox">
+			<p class="text">
+				If you're interested in reaching out, feel free to use any of the following mediums...
+			</p>
 		</div>
-	</div><!--Close Skilltable-->
-</body>
+
+		<div id="contactBox" class="contentBox">
+				<a href="https://www.facebook.com/ian.lai.560" target="_blank"><img src="assets/bw_facebook.png" class="contactPic"></a>
+				<a href="https://www.linkedin.com/in/ian-lai-244971112/" target="_blank"><img src="assets/linkedin_bw.png" class="contactPic"></a>
+				<a href="mailto:ianlaiuw@gmail.com"><img src="assets/email.png" class="contactPic"></a>
+				<a href="https://github.com/snipower" target="_blank"><img src="assets/github-mark.png" class="contactPic"></a>
+				
+		</div>
+
+		<div class="contentBox">
+			<div class="text">Finally, here's my resume! I'm currently looking for Co-op positions for September 2017 :) </div>
+			<a href="Ian_Lai_Resume.pdf" target="_blank"><img src="assets/resume.png" class="contactPic"></a>
+		</div>
+
+		<div id="topBox">
+			<a href="#top">
+				<img id="topButton" src="assets/backtotop.png">
+			</a>
+		</div>
+	</body>
 </html>
-
-
-

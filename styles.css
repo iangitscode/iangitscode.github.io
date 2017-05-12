@@ -8,6 +8,18 @@ body{
 	top:0;
 }
 
+.hoverGrow{
+	-moz-transition: all 0.1s;
+ 	-khtml-transition: all 0.1s;
+ 	-webkit-transition: all 0.1s;
+	-o-transition: all 0.1s;
+	transition: all 0.1s;
+}
+
+.hoverGrow:hover{
+	transform: scale(1.05);
+}
+
 .title{
 	font-size:600%;
 	font-family:Raleway;
@@ -40,16 +52,10 @@ body{
 	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 	font-family:Raleway;
 	font-size:130%;
-	-moz-transition: all 0.1s;
- 	-khtml-transition: all 0.1s;
- 	-webkit-transition: all 0.1s;
-	-o-transition: all 0.1s;
-	transition: all 0.1s;
 }
 
 .button:hover{
 	cursor:pointer;
-	transform: scale(1.05);
 }
 
 .contentBox{
@@ -76,8 +82,7 @@ body{
 }
 
 .project{
-	margin-left:75px;
-	margin-right:75px;
+	margin:75px;
 	position:relative;
 	border:5px solid #b2b2b2;
 	border-radius:5px;

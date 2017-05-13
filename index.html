@@ -1,4 +1,7 @@
 <html>
+	<!-- 
+	Well aren't you curious?
+	-->
 	<head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="main.js"></script>
@@ -10,11 +13,11 @@
 	</head>
 	<body> 
 		<div id="top"></div>
-		<p class="title">Hi :) I'm Ian.</p>
+		<p class="title">Hi, I'm Ian.</p>
 		<nav id="buttonContainer">
 			<a class="hoverGrow button" href="#aboutmeBox">About Me</a>
-			<a class="hoverGrow button" href="#projectsBox">Projects</a>
-			<a class="hoverGrow button" href="#contactBox">Contact Me</a>
+			<a class="hoverGrow button" href="#projectsAnchor">Projects</a>
+			<a class="hoverGrow button" href="#contactAnchor">Contact Me</a>
 		</nav>
 		<div id="aboutmeBox" class="contentBox">
 			<div class="text">
@@ -25,7 +28,7 @@
 				I study Computer Science at the University of Waterloo <br>
 				I am in my 2B term <br> 
 				I code things! <br>
-				I coach a recreational dragonboat team at the University<br>
+				I coach a recreational dragonboat team at the University <br>
 				I have a first dan black belt in Taekwondo <br>
 				I am a huge fan of Hamilton and Les Mis <br>
 				I play the trombone and the piano <br>
@@ -35,12 +38,12 @@
 			</div>
 		</div>
 
-		<div id="projectsBox" class="contentBox">
+		<div id="projectsAnchor" class="contentBox">
 			<div class="hoverGrow project">
 				<img src="assets/graph.png" class="projectPic">
 				<div class="projectTitle">GraphEz</div>
 				<a target="_blank" href="http://jonahdlin.com/graph">
-					<div class="overlay">A graph theory tool that I built in collaboration with Jonah Dlin. It utilises a tool based system to manipulate the graph. Canvas was used to display the nodes and edges, and Javascript and jQuery were used for the logic.</div>
+					<div class="overlay">A graph theory tool I built in collaboration with Jonah Dlin. It utilises a tool based system to manipulate the graph. Canvas was used to display the nodes and edges, and Javascript and jQuery were used for the logic.</div>
 				</a>
 			</div>
 
@@ -48,7 +51,7 @@
 				<img src="assets/ball.png" class="projectPic">
 				<div class="projectTitle">Soccer Game</div>
 				<a target="_blank" href="http://ianlai.ca/Soccer-Game">	
-					<div class="overlay">A simple game with a basic physics engine I built from scratch, based on the Facebook Messenger soccer game. This was one of my first Javascript projects.
+					<div class="overlay">A juggling game with a basic physics engine I built from scratch, based on the Facebook Messenger soccer game. This was one of my first Javascript projects.
 				</div>
 				</a>
 			</div>
@@ -65,13 +68,18 @@
 				<img src="assets/menolikey.png" class="projectPic">
 				<div class="projectTitle">Me No Likey</div>
 				<a target="_blank" href="https://github.com/snipower/MeNoLikey">	
-					<div class="overlay">A Chrome Extension that simply removes the 'Like' button from all Facebook pages. This was my first venture into the Chrome Extension world.
+					<div class="overlay">A Chrome Extension that removes the 'Like' button from all Facebook pages. This was my first venture into the Chrome Extension world.
 				</div>
 				</a>
 			</div>
 		</div>
 
-		<div class="contentBox">
+		<div class="contentBox flexDown">
+			<div class="text">If you want to see how any of these work, all the code is available on Github</div>
+			<a href="https://github.com/snipower" target="_blank"><img src="assets/github-mark.png" class="hoverGrow contactPic"></a>
+		</div>
+
+		<div id="contactAnchor" class="contentBox">
 			<p class="text">
 				If you're interested in reaching out, feel free to use any of the following...
 			</p>
@@ -80,12 +88,10 @@
 		<div id="contactBox" class="contentBox">
 				<a href="https://www.facebook.com/ian.lai.560" target="_blank"><img src="assets/bw_facebook.png" class="hoverGrow contactPic"></a>
 				<a href="https://www.linkedin.com/in/ian-lai-244971112/" target="_blank"><img src="assets/linkedin_bw.png" class="hoverGrow contactPic"></a>
-				<a href="mailto:ianlaiuw@gmail.com"><img src="assets/email.png" class="hoverGrow contactPic"></a>
-				<a href="https://github.com/snipower" target="_blank"><img src="assets/github-mark.png" class="hoverGrow contactPic"></a>
-				
+				<a href="mailto:ianlaiuw@gmail.com"><img src="assets/email.png" class="hoverGrow contactPic"></a>	
 		</div>
 
-		<div class="contentBox">
+		<div class="contentBox flexDown">
 			<div class="text">Finally, here's my resume! I'm currently looking for Co-op positions for September 2017 :) </div>
 			<a href="Ian_Lai_Resume.pdf" target="_blank"><img src="assets/resume.png" class="hoverGrow contactPic"></a>
 		</div>

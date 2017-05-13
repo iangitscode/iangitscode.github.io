@@ -68,6 +68,10 @@ body{
 	margin-bottom:15%;
 }
 
+.flexDown{
+	flex-direction:column;
+}
+
 #aboutmeBox{
 	width:100%;
 	display:flex;
@@ -77,7 +81,7 @@ body{
 
 .text{
 	width:70%;
-	font-size:300%;
+	font-size:250%;
 	font-family:Raleway;
 }
 
@@ -102,6 +106,7 @@ body{
 	background-color:#824500;
 	color:white;
 	font-size:150%;
+	font-family:Raleway;
 }
 
 .overlay{
@@ -122,7 +127,7 @@ body{
 }
 
 .project:hover .overlay{
-	opacity:0.8;
+	opacity:0.85;
 }
 
 #contactBox{

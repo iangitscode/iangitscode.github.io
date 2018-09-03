@@ -1,11 +1,11 @@
 body{
 	overflow-x: hidden;
-	background-color:#f7f7f7;
+	background-color: #f7f7f7;
 }
 
 #top{
-	position:absolute;
-	top:0;
+	position: absolute;
+	top: 0;
 }
 
 .hoverGrow{
@@ -21,137 +21,144 @@ body{
 }
 
 .title{
-	font-size:600%;
-	font-family:Raleway;
-	font-weight:bolder;
-	text-align:center;
-	width:100%;
-	margin-top:300px;
-	user-select:none;
+	font-size: 600%;
+	font-family: Raleway;
+	font-weight: bolder;
+	text-align: center;
+	width: 100%;
+	margin-top: 300px;
+	user-select: none;
 }
 
 #buttonContainer{
-	display:flex;
-	justify-content:center;
-	margin-top:50px;
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
 }
 
 .button{
-	background-color:#f7f7f7;
-	width:200px;
-	height:100px;
-	border:5px solid #b2b2b2;
-	margin:50px;
-	text-decoration:none;
-	display:flex;
-	color:black;
-	user-select:none;
-	justify-content:center;
-	align-items:center;
-	border-radius:5px;
+	background-color: #f7f7f7;
+	width: 200px;
+	height: 100px;
+	border: 5px solid #b2b2b2;
+	margin: 50px;
+	text-decoration: none;
+	display: flex;
+	color: black;
+	user-select: none;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
 	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-	font-family:Raleway;
-	font-size:130%;
+	font-family: Raleway;
+	font-size: 130%;
 }
 
 .button:hover{
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .contentBox{
-	width:100%;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	flex-wrap:wrap;
-	margin-top:15%;
-	margin-bottom:15%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 15%;
+	margin-bottom: 15%;
 }
 
 .flexDown{
-	flex-direction:column;
+	flex-direction: column;
 }
 
 #aboutmeBox{
-	width:100%;
-	display:flex;
-	justify-content:center;
-	align-items:center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .text{
-	width:70%;
-	font-size:250%;
-	font-family:Raleway;
+	width: 70%;
+	font-size: 250%;
+	font-family: Raleway;
 }
 
 .project{
-	margin:75px;
-	position:relative;
-	border:5px solid #b2b2b2;
-	border-radius:5px;
+	margin: 75px;
+	position: relative;
+	border: 5px solid #b2b2b2;
+	border-radius: 5px;
 	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-	cursor:pointer;
-	user-select:none;
+	cursor: pointer;
+	user-select: none;
 }
 
 .projectPic{
-	width:300px;
-	height:300px;
+	width: 300px;
+	height: 300px;
 }
 
 .projectTitle{
-	width:100%;
-	text-align:center;
-	background-color:#824500;
-	color:white;
-	font-size:150%;
-	font-family:Raleway;
+	width: 100%;
+	text-align: center;
+	background-color: #824500;
+	color: white;
+	font-size: 150%;
+	font-family: Raleway;
 }
 
 .overlay{
-	position:absolute;
-	top:0;
+	position: absolute;
+	top: 0;
 	-moz-transition: all 0.5s;
  	-khtml-transition: all 0.5s;
  	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
-	opacity:0;
-	width:300px;
-	height:300px;
-	background-color:#002663;
-	color:white;
-	font-family:Raleway;
-	font-size:130%;
+	opacity: 0;
+	width: 300px;
+	height: 300px;
+	background-color: #002663;
+	color: white;
+	font-family: Raleway;
+	font-size: 130%;
+	box-sizing: border-box;
+	padding: 10px;
 }
 
 .project:hover .overlay{
-	opacity:0.85;
+	opacity: 0.85;
 }
 
 #contactBox{
-	justify-content:space-around;
+	justify-content: space-around;
 }
 
 .contactPic{
-	width:100px;
-	height:100px;
-	border-radius:30px;
-	user-select:none;
+	width: 100px;
+	height: 100px;
+	border-radius: 30px;
+	user-select: none;
+
+}
+
+.contactPic:hover{
+	filter: grayscale(100%);
 }
 
 #topBox{
-	text-align:center;
-	width:100%;
+	text-align: center;
+	width: 100%;
 }
 
 #topButton{
-	width:50px;
-	height:50px;
-	user-select:none;
+	width: 50px;
+	height: 50px;
+	user-select: none;
 }
 
 .pink{
-	color:#C60078;
+	color: #C60078;
 }

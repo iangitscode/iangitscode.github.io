@@ -16,13 +16,12 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
 	<body> 
-		<div id="top"></div>
 		<div id = "titleContentBox"class="contentBox">
 			<div class="title">Hi, I'm Ian.</div>
 			<nav id="buttonContainer">
-				<a class="hoverGrow button" href="#aboutmeBox">About Me</a>
-				<a class="hoverGrow button" href="#projectsAnchor">Projects</a>
-				<a class="hoverGrow button" href="#contactAnchor">Contact Me</a>
+				<a class="opaque hoverGrow button" href="#aboutmeBox">About Me</a>
+				<a class="opaque hoverGrow button" href="#projectsAnchor">Projects</a>
+				<a class="opaque hoverGrow button" href="#contactAnchor">Contact Me</a>
 			</nav>
 		</div>
 		<div id="aboutmeBox" class="contentBox">
@@ -41,71 +40,71 @@
 			</div>
 		</div>
 
-		<div id="projectsAnchor" class="contentBox">
-			<div class="hoverGrow project">
-				<div class="projectPic titleAsPicture"> OS/161 </div>
-				<div class="projectTitle">OS/161 Kernel</div>
-				<a target="_blank" href="http://os161.eecs.harvard.edu/">
-					<div class="overlay">OS/161 is a teaching operating system written in C for the MIPS system. I implemented several crucial kernel components, including synchronization primitives, system calls, support for multithreading and multiprocessing, and virtual memory.</div>
-				</a>
-			</div>
-
-			<div class="hoverGrow project">
-				<div class="projectPic titleAsPicture"> WLP4 </div>
-				<div class="projectTitle">WLP4 Compiler</div>
-				<a target="_blank" href="https://www.student.cs.uwaterloo.ca/~cs241/wlp4/WLP4.html">
-					<div class="overlay">A compiler written in C++ that translates WLP4, a subset of C++, to MIPS machine code. This compiler supports types, pointers and a heap, a stack, functions, conditional statements, and loops.</div>
-				</a>
-			</div>
-
-			<div class="hoverGrow project">
-				<img src="assets/graph.png" class="projectPic">
-				<div class="projectTitle">GraphHax</div>
-				<a target="_blank" href="http://jonahdlin.com/graph">
-					<div class="overlay">A graph theory tool I built in collaboration with Jonah Dlin. It utilises a tool based system to manipulate the graph. Canvas was used to display the nodes and edges, and Javascript and jQuery were used for the logic.</div>
-				</a>
-			</div>
-
-			<div class="hoverGrow project">
-				<img src="assets/ball.png" class="projectPic">
-				<div class="projectTitle">Juggle</div>
-				<a target="_blank" href="https://ianlai.ca/juggle">	
-					<div class="overlay">A juggling game with a basic physics engine I built from scratch, based on the Facebook Messenger soccer game. This was one of my first Javascript projects.
+		<div id="projectsAnchor" class="projectsSection contentBox">
+			<p class="text">Here are some things that I'm proud of! </p>
+			<div class="projects">
+				<div class="hoverGrow project">
+					<div class="opaque projectPic titleAsPicture"> OS/161 </div>
+					<div class="projectTitle">OS/161 Kernel</div>
+					<a target="_blank" href="http://os161.eecs.harvard.edu/">
+						<div class="overlay">OS/161 is a teaching operating system written in C for the MIPS system. I implemented several crucial kernel components, including synchronization primitives, system calls, support for multithreading and multiprocessing, and virtual memory.</div>
+					</a>
 				</div>
-				</a>
-			</div>
 
-			<div class="hoverGrow project">
-				<img src="assets/music.png" class="projectPic">
-				<div class="projectTitle">Ear Training Tool</div>
-				<a target="_blank" href="https://ianlai.ca/EarTraining">
-					<div class="overlay">A tool designed to develop and fine tune <!--pun intended--> pitch recognition skills. Web Audio API was used to connect to the client's speakers and produce a sound at the correct frequency. </div>
-				</a>
-			</div>
-
-			<div class="hoverGrow project">
-				<img src="assets/menolikey.png" class="projectPic">
-				<div class="projectTitle">Me No Likey</div>
-				<a target="_blank" href="https://github.com/iangitscode/MeNoLikey">	
-					<div class="overlay">A Chrome Extension that removes the 'Like' button from all Facebook pages.
+				<div class="hoverGrow project">
+					<div class="opaque projectPic titleAsPicture"> WLP4 </div>
+					<div class="projectTitle">WLP4 Compiler</div>
+					<a target="_blank" href="https://www.student.cs.uwaterloo.ca/~cs241/wlp4/WLP4.html">
+						<div class="overlay">A compiler written in C++ that translates WLP4, a subset of C++, to MIPS machine code. This compiler supports types, pointers and a heap, a stack, functions, conditional statements, and loops.</div>
+					</a>
 				</div>
-				</a>
+
+				<div class="hoverGrow project">
+					<img src="assets/graph.png" class="opaque projectPic">
+					<div class="projectTitle">GraphHax</div>
+					<a target="_blank" href="http://jonahdlin.com/graph">
+						<div class="overlay">A graph theory tool I built in collaboration with Jonah Dlin. It utilises a tool based system to manipulate the graph. Canvas was used to display the nodes and edges, and Javascript and jQuery were used for the logic.</div>
+					</a>
+				</div>
+
+				<div class="hoverGrow project">
+					<img src="assets/ball.png" class="opaque projectPic">
+					<div class="projectTitle">Juggle</div>
+					<a target="_blank" href="https://ianlai.ca/juggle">	
+						<div class="overlay">A juggling game with a basic physics engine I built from scratch, based on the Facebook Messenger soccer game. This was one of my first Javascript projects.
+					</div>
+					</a>
+				</div>
+
+				<div class="hoverGrow project">
+					<img src="assets/music.png" class="opaque projectPic">
+					<div class="projectTitle">Ear Training Tool</div>
+					<a target="_blank" href="https://ianlai.ca/EarTraining">
+						<div class="overlay">A tool designed to develop and fine tune <!--pun intended--> pitch recognition skills. Web Audio API was used to connect to the client's speakers and produce a sound at the correct frequency. </div>
+					</a>
+				</div>
+
+				<div class="hoverGrow project">
+					<img src="assets/menolikey.png" class="opaque projectPic">
+					<div class="projectTitle">Me No Likey</div>
+					<a target="_blank" href="https://github.com/iangitscode/MeNoLikey">	
+						<div class="overlay">A Chrome Extension that removes the 'Like' button from all Facebook pages.
+					</div>
+					</a>
+				</div>
 			</div>
 		</div>
 
 		<div id="contactAnchor" class="contentBox">
-			<div class="text">
+			<p class="text">
 				I'm looking for internships for Summer 2019. If you have work for me, let me know!
-			</div>
+			</p>
 			<div class="contactLinks">
 				<a href="https://www.linkedin.com/in/ian-lai-244971112/" target="_blank"><img src="assets/linkedin.png" class="hoverGrow contactPic"></a>
 	        	<a href="Ian_Lai_Resume.pdf" target="_blank"><img src="assets/resume.png" class="hoverGrow contactPic"></a>
 				<a href="mailto:ianlaiuw@gmail.com"><img src="assets/email.png" class="hoverGrow contactPic"></a>	
 	        	<a href="https://github.com/iangitscode" target="_blank"><img src="assets/github-mark.png" class="hoverGrow contactPic"></a>
 	        </div>
-			<a href="#top">
-				<img id="topButton" class="hoverGrow" src="assets/backtotop.png">
-			</a>
 		</div>
 		</div>
 	</body>

@@ -32,6 +32,7 @@ body {
 	background-attachment: fixed;
 	background-position: center center;
 	margin: 0;
+	font-family: Raleway;
 }
 
 #top {
@@ -53,7 +54,6 @@ body {
 
 .title {
 	font-size: 600%;
-	font-family: Raleway;
 	font-weight: bolder;
 	text-align: center;
 	width: 100%;
@@ -79,7 +79,6 @@ body {
 	align-items: center;
 	border-radius: 5px;
 	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
-	font-family: Raleway;
 	font-size: 130%;
 }
 
@@ -101,7 +100,7 @@ body {
 	margin-top: 15%;
 	background-color: rgba(247, 247, 247, 0.9);
 	padding: 20px;
-	box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.5), 0 -10px 30px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.5), 0 -5px 30px 0 rgba(0, 0, 0, 0.5);
 }
 
 .flexDown {
@@ -117,7 +116,6 @@ body {
 
 .text {
 	font-size: 250%;
-	font-family: Raleway;
 }
 
 .projectsSection {
@@ -154,7 +152,6 @@ body {
 	background-color: #824500;
 	color: white;
 	font-size: 150%;
-	font-family: Raleway;
 }
 
 .titleAsPicture {
@@ -162,7 +159,6 @@ body {
 	align-items: center;
 	justify-content: center;
 	font-size: 300%;
-	font-family: Raleway;
 }
 
 .overlay {
@@ -178,7 +174,6 @@ body {
 	height: 300px;
 	background-color: #002663;
 	color: white;
-	font-family: Raleway;
 	font-size: 130%;
 	box-sizing: border-box;
 	padding: 10px;
@@ -221,4 +216,52 @@ body {
 
 .opaque {
 	background-color: rgba(247, 247, 247, 1);
+}
+
+.cover {
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	z-index: 2;
+	background-color: #ffe7d6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.centerLogo {
+	background-image: url("assets/logo.png");
+	background-size: contain;
+	height: 200px;
+	width: 200px;
+	border-radius: 20px;
+	animation: loading 5s ease infinite;
+}
+
+.loadingText {
+	margin-top: 50px;
+	font-size: 200%;
+}
+
+.loadingText::after {
+	content: "...";
+	animation: flash 2.5s linear infinite;
+}
+
+@keyframes loading {
+	0%	{transform: rotateZ(0deg);}
+	25% {transform: rotateZ(90deg);}
+	50% {transform: rotateZ(180deg);}
+	75% {transform: rotateZ(270deg);}
+	100% {transform: rotateZ(360deg);}
+}
+
+@keyframes flash {
+	0% {opacity: 1;}
+	50% {opacity: 0;}
+}
+
+.websiteContent {
+	display: none;
 }

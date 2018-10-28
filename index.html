@@ -26,9 +26,9 @@
 			<div id = "titleContentBox"class="contentBox">
 				<div class="title">Hi, I'm Ian.</div>
 				<nav id="buttonContainer">
-					<a class="opaque hoverGrow button" href="#aboutmeBox">About Me</a>
-					<a class="opaque hoverGrow button" href="#projectsAnchor">Projects</a>
-					<a class="opaque hoverGrow button" href="#contactAnchor">Contact Me</a>
+					<div class="opaque hoverGrow button" onclick="smooth_scroll('aboutmeBox')">About Me</div>
+					<div class="opaque hoverGrow button" onclick="smooth_scroll('projectsAnchor')">Projects</div>
+					<div class="opaque hoverGrow button" onclick="smooth_scroll('contactAnchor')">Contact Me</div>
 				</nav>
 			</div>
 			<div id="aboutmeBox" class="contentBox">
@@ -49,6 +49,15 @@
 			<div id="projectsAnchor" class="projectsSection contentBox">
 				<p class="text">Here are some things that I'm proud of! </p>
 				<div class="projects">
+					
+					<div class="hoverGrow project">
+						<img src="assets/pokeball.PNG" class="opaque projectPic">
+						<div class="projectTitle">Pokemon TCG Draft</div>
+						<a target="_blank" href="https://ianlai.ca/pokemontcgdraft">
+							<div class="overlay">A Pokemon TCG draft deck builder inspired by Hearthstone's Arena mode. Players build decks by selecting one out of three randomly selected cards from specified card sets. Players can then export the deck for online play using tcgone.</div>
+						</a>
+					</div>
+
 					<div class="hoverGrow project">
 						<div class="opaque projectPic titleAsPicture"> OS/161 </div>
 						<div class="projectTitle">OS/161 Kernel</div>

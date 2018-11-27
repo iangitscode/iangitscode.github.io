@@ -43,7 +43,8 @@ let toPreload = ["assets/deepcove.JPG",
 				"assets/menolikey.png",
 				"assets/music.png",
 				"assets/resume.png",
-				"assets/pokeball.PNG"];
+				"assets/pokeball.PNG",
+        "assets/cah.png"];
 
 let imageLoadPromises = [];
 	for (let url of toPreload) {
